@@ -39,5 +39,29 @@ This project predicts human emotions from text using **Natural Language Processi
   - M3-LSTM -checkpoint.ipynb
   - M4 - RFC-checkpoint.ipynb
   - M5 - RFC-checkpoint.ipynb
--**Deploy**
-  -  
+ 
+--- 
+## Deploy
+- **static**
+  - css
+  - imgs
+  - js
+  - vendors
+    
+- **migrations**
+  - __pycache__
+  - templates
+     - app
+     - users
+  - models.py
+  - tests.py
+  - urls.py
+  - views.py
+
+ - **media**
+ - **profile_images**
+ - **project**
+ - **db.sqlite3**
+ - **default.jpg**
+ - **manage.py**
+  
