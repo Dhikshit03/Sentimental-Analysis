@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            body {
+            margin: 0;
+            font-family: sans-serif;
+            background: transparent;
+            background-color: transparent;
+            
+          }
+
+          p{
+            color: black;
+          }
+
+          h1{
+            font-size: 40px;
+            color: white;
+          }
+
+          .menu1 {
+            padding: 15px;
+          }
+
+          .input1{
+            padding: 10px;
+            margin-left: 40px;
+            margin-right: 40px;
+            width: 225px;
+            text-align: center;
+            border-radius: 25px;
+          }
+
+          input[type=text], select {
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+
+          input[type=password], select {
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+
+          input[type=email], select {
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+
+          input[type=date], select {
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+
+          input[type=submit] {
+            width: 40%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+
+          input[type=submit]:hover {
+            background-color: #640202;
+          }
+
+          .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+            padding-left: 25px;
+          }
+
+          .button {
+            width: 100%;
+            background-color: #ff9800;
+            color: #ff9800;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 34px;
+            cursor: pointer;
+          }
+
+          .buttons {
+            width: 40%;
+            background-color: #ff9800;
+            color: #ff9800;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 34px;
+            cursor: pointer;
+          }
+
+          .button1 {
+            background-color: rgb(157, 18, 0); 
+            color: white; 
+          }
+
+          .button1:hover {
+            background-color: rgb(124, 0, 0);
+            color: white;
+          }
+
+          .login {
+            border: none;
+            border-radius: 1.5rem;
+            background: #f8f8f8;
+            font-weight: 600;
+            color: #f8f8f8;
+            margin-top: 20px;
+            padding: 50px;
+            float: right;
+            border-top-left-radius: 40% 50%;
+            border-bottom-left-radius: 5% 50%;
+            padding-left :100px;
+            padding-right :80px;
+          }
+
+          div {
+            background-color: transparent;
+            padding: 20px;
+            padding-left: 40px;
+          }
+
+          .log {
+            background-color: #333;
+            border-radius: 14px;
+            padding: 25px;
+            padding-left: 45px;
+            padding-right: 0px;
+          }
+
+          .bleu:link, .bleu:visited {
+            background-color: #5bc0db;
+            color: #fff;
+            padding: 8px 10px;
+            border-radius: 15px;
+            text-decoration: none;
+            display: inline-block;
+          }
+
+          .bleu:hover, .bleu:active {
+            border-color: #48dbfb;
+            color: #fff;
+            background-color: black;
+          }
+
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+          }
+
+          li {
+            float: left;
+          }
+
+          li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+
+          li a:hover:not(.active) {
+            background-color: #111;
+          }
+
+          .active {
+            background-color: #4CAF50;
+          }
+
+          #acc{
+            background-image: linear-gradient(to right, #000000 , #999e9e);
+          }
+
+
+</style>
+</head>
+<body>
+    <html>
+<head>
+<meta charset="utf-8">
+  <title>home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body id="acc">
+      <div><center><h1><label>INTRUSION DETECTION MODEL</label></h1></center></div> 
+      <center><button type="submit" style="width:150px;padding:10px"><a href="/">Home</a></button></center>		
+  <div>
+        <form method="post" action="{% url 'model' %}" class="">
+          {% csrf_token %}
+              <p><label style="color: white">src_bytes :</label></p>
+              <p><input type="text" name="src_bytes" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">dst_bytes :</label></p>
+              <p><input type="text" name="dst_bytes" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">num_failed_logins :</label></p>
+              <p><input type="text" name="num_failed_logins" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">logged_in :</label></p>
+              <p><input type="text" name="logged_in" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">num_compromised :</label></p>
+              <p><input type="text" name="num_compromised" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">root_shell :</label></p>
+              <p><input type="text" name="root_shell" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">su_attempted :</label></p>
+              <p><input type="text" name="su_attempted" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">num_root :</label></p>
+              <p><input type="text" name="num_root" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">num_file_creations :</label></p>
+              <p><input type="text" name="num_file_creations" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">num_shells :</label></p>
+              <p><input type="text" name="num_shells" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">num_access_files :</label></p>
+              <p><input type="text" name="num_access_files" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">num_outbound_cmds :</label></p>
+              <p><input type="text" name="num_outbound_cmds" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">is_host_login :</label></p>
+              <p><input type="text" name="is_host_login" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">is_guest_login :</label></p>
+              <p><input type="text" name="is_guest_login" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">count :</label></p>
+              <p><input type="text" name="count" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">srv_count :</label></p>
+              <p><input type="text" name="srv_count" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">serror_rate :</label></p>
+              <p><input type="text" name="serror_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+              <p><label style="color: white">srv_serror_rate :</label></p>
+              <p><input type="text" name="srv_serror_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">rerror_rate :</label></p>
+              <p><input type="text" name="rerror_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+
+              <p><label style="color: white">srv_rerror_rate :</label></p>
+              <p><input type="text" name="srv_rerror_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+              <p><label style="color: white">same_srv_rate :</label></p>
+              <p><input type="text" name="same_srv_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+              <p><label style="color: white">diff_srv_rate :</label></p>
+              <p><input type="text" name="diff_srv_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>         
+              
+              <p><label style="color: white">srv_diff_host_rate :</label></p>
+              <p><input type="text" name="srv_diff_host_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+              <p><label style="color: white">dst_host_count :</label></p>
+              <p><input type="text" name="dst_host_count" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>    
+              
+              <p><label style="color: white">dst_host_srv_count :</label></p>
+              <p><input type="text" name="dst_host_srv_count" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+              <p><label style="color: white">dst_host_same_srv_rate :</label></p>
+              <p><input type="text" name="dst_host_same_srv_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+              <p><label style="color: white">dst_host_diff_srv_rate :</label></p>
+              <p><input type="text" name="dst_host_diff_srv_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+              <p><label style="color: white">dst_host_same_src_port_rate :</label></p>
+              <p><input type="text" name="dst_host_same_src_port_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+              <p><label style="color: white">dst_host_srv_diff_host_rate :</label></p>
+              <p><input type="text" name="dst_host_srv_diff_host_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+              <p><label style="color: white">dst_host_serror_rate :</label></p>
+              <p><input type="text" name="dst_host_serror_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+              <p><label style="color: white">dst_host_srv_serror_rate :</label></p>
+              <p><input type="text" name="dst_host_srv_serror_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+              <p><label style="color: white">dst_host_rerror_rate :</label></p>
+              <p><input type="text" name="dst_host_rerror_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+              <p><label style="color: white">dst_host_srv_rerror_rate :</label></p>
+              <p><input type="text" name="dst_host_srv_rerror_rate" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+              <p><label style="color: white">target :</label></p>
+              <p><input type="text" name="target" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              </p>
+              
+             
+              <br>
+              <br>
+              <p><button class="buttons button1" type="submit">SUBMIT</button>
+    </div>
+</body>
+</html>
+    
+</body>
+</html>

@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>output</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+   /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+/* General styling for the card */
+.card {
+    background: #ffdede;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 20px;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.card-header img {
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.card-body {
+    padding: 15px;
+    background: #f9f9f9;
+}
+
+.section {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.section-text {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li strong {
+    color: #333;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-header img {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+
+</style>
+
+<body>
+    <div class="container">
+        
+        
+
+        <!-- Blood Donor -->
+        {% if prediction_text == 'anger' %}
+        <div class="card">
+            <center><h1>Anger Management Solutions</h1></center>
+            <div class="card-header">
+                Solutions for Anger Management <br><br>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHxcq59kRGQn-2qLUfK6oYg0DNTM-4Cj4jJw&s" alt="Anger Management">
+            </div>
+            <div class="card-body">
+                <div class="section">
+                    <h5 class="section-title">Understanding Anger:</h5>
+                    <p class="section-text">Anger is a natural emotion, but when it becomes excessive or uncontrolled, it can cause problems in personal and professional relationships. It’s important to understand the triggers and patterns of anger to manage it effectively.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Identify Triggers:</h5>
+                    <p class="section-text">Recognize what triggers your anger. This could be specific situations, people, or stressors. Keeping a journal to track these triggers can help in understanding and addressing the root causes.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Practice Deep Breathing:</h5>
+                    <p class="section-text">Deep breathing exercises can help calm the mind and body. When you feel anger rising, take slow, deep breaths to help reduce the intensity of the emotion.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Implement Relaxation Techniques:</h5>
+                    <p class="section-text">Incorporate relaxation techniques such as meditation, yoga, or progressive muscle relaxation into your routine. These practices can help in managing stress and reducing overall anger levels.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Develop Effective Communication Skills:</h5>
+                    <p class="section-text">Improve your communication skills to express your feelings calmly and assertively without aggression. Use "I" statements to convey your feelings and needs clearly and constructively.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Seek Professional Counseling:</h5>
+                    <p class="section-text">Consult with a mental health professional, such as a psychologist or counselor, who can provide personalized strategies and support for managing anger effectively. Therapy can also help uncover underlying issues contributing to anger.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Engage in Regular Physical Activity:</h5>
+                    <p class="section-text">Exercise is a powerful tool for managing anger and reducing stress. Engaging in physical activity regularly can help release pent-up energy and improve mood.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Adopt Problem-Solving Techniques:</h5>
+                    <p class="section-text">Learn and practice problem-solving techniques to address the issues causing anger. Developing practical solutions to problems can reduce frustration and prevent anger from escalating.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Practice Mindfulness:</h5>
+                    <p class="section-text">Mindfulness involves staying present and fully engaged in the current moment. Practicing mindfulness can help you become more aware of your emotions and reactions, allowing you to manage anger more effectively.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Build a Support Network:</h5>
+                    <p class="section-text">Surround yourself with supportive friends and family who can offer understanding and encouragement. A strong support network can provide valuable perspective and help you navigate challenging situations.</p>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        {% elif prediction_text == 'disgust' %}
+        <div class="card">
+            <center><h1>Addressing Disgust in Emotion Prediction</h1></center>
+            <div class="card-header">
+                Disgust <br><br>
+                <img src="https://media.istockphoto.com/id/1080813354/photo/mmm-nah.jpg?s=612x612&w=0&k=20&c=nyc11NvL7jWTfP79zOMGnyVi8ajqnVAPXDZMXq6EvG8=" alt="Emotion Prediction">
+            </div>
+            <div class="card-body">
+                <div class="section">
+                    <h5 class="section-title">Understanding Disgust:</h5>
+                    <p class="section-text">Disgust is a complex emotion that can manifest in response to unpleasant or offensive stimuli. It can be triggered by sensory experiences such as unpleasant smells, tastes, or sights, as well as by psychological factors like moral violations or social rejection. Properly identifying and addressing disgust in emotional prediction models requires an understanding of both physiological and psychological aspects of the emotion.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Approach to Solving Disgust Problems:</h5>
+                    <p class="section-text">To effectively handle disgust in emotion prediction, consider the following strategies:</p>
+                    <ul>
+                        <li><strong>Data Collection:</strong> Gather comprehensive data that includes various scenarios triggering disgust. This can involve both subjective self-reports and objective measures such as facial expressions or physiological responses.</li>
+                        <li><strong>Model Training:</strong> Utilize machine learning algorithms to train models on the collected data. Ensure that the models are capable of distinguishing between disgust and similar emotions like anger or fear.</li>
+                        <li><strong>Feature Engineering:</strong> Incorporate features that capture the nuances of disgust, such as changes in facial expressions, voice tone, or physiological indicators like heart rate variability.</li>
+                        <li><strong>Regular Validation:</strong> Continuously validate and update the models to improve accuracy. Include diverse datasets to ensure the models can generalize across different individuals and contexts.</li>
+                        <li><strong>Intervention Strategies:</strong> Develop strategies to address and manage disgust, such as cognitive-behavioral techniques or exposure therapy, based on the emotional predictions.</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Expert Recommendations:</h5>
+                    <p class="section-text">According to a doctor with over 10 years of experience in emotional and psychological health, addressing disgust involves a multi-faceted approach:</p>
+                    <ul>
+                        <li><strong>Comprehensive Assessment:</strong> Conduct a thorough assessment to understand the individual's specific triggers and responses to disgust.</li>
+                        <li><strong>Personalized Treatment:</strong> Tailor interventions to the individual's needs, incorporating techniques like mindfulness, desensitization, and cognitive restructuring.</li>
+                        <li><strong>Education and Awareness:</strong> Educate individuals about the nature of disgust and its impact on emotional well-being. Awareness can aid in better managing and mitigating the effects of disgust.</li>
+                        <li><strong>Ongoing Support:</strong> Provide ongoing support and follow-up to monitor progress and make necessary adjustments to the treatment plan.</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Additional Resources:</h5>
+                    <p class="section-text">For more information on managing disgust and improving emotion prediction models, consider consulting with a specialist in emotional health or a behavioral psychologist. Additionally, exploring academic literature on emotion recognition and psychological interventions can provide further insights.</p>
+                </div>
+            </div>
+        </div>
+        
+        {% elif prediction_text == 'fear' %}
+        <div class="card">
+            <center><h1>Managing Fear</h1></center>
+            <div class="card-header">
+                Understanding and Addressing Fear<br><br>
+                <img src="https://img.freepik.com/free-photo/lovely-blue-eyed-female-feels-scared-bites-fingernails-with-fear-feels-insecure-wears-spectacles-denim-jacket-isolated-white-wall-people-anxiety-concept_273609-15721.jpg" alt="Managing Fear">
+            </div>
+            <div class="card-body">
+                <div class="section">
+                    <h5 class="section-title">Understanding Fear:</h5>
+                    <p class="section-text">Fear is a natural emotional response to perceived threats or danger. It can be a normal part of life, but when it becomes overwhelming or irrational, it may interfere with daily activities and overall well-being. Understanding the root causes of fear and its impact on mental health is crucial for effective management.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Expert Insights on Fear Management:</h5>
+                    <p class="section-text">According to a doctor with over 10 years of experience in mental health, effective fear management involves a combination of therapeutic techniques, lifestyle changes, and professional support. Here are key strategies to address and manage fear:</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">1. Cognitive Behavioral Therapy (CBT):</h5>
+                    <p class="section-text">CBT is a widely used approach for managing fear and anxiety. It helps individuals identify and challenge negative thought patterns and replace them with healthier, more realistic ones. A skilled therapist can guide patients through CBT to help them cope with and reduce fear.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">2. Exposure Therapy:</h5>
+                    <p class="section-text">Exposure therapy involves gradually and systematically exposing individuals to the sources of their fear in a controlled environment. This technique helps desensitize the individual to the fear and build resilience. It's often used for phobias and other anxiety disorders.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">3. Mindfulness and Relaxation Techniques:</h5>
+                    <p class="section-text">Practicing mindfulness and relaxation techniques can help manage fear by reducing stress and promoting a sense of calm. Techniques such as deep breathing exercises, meditation, and progressive muscle relaxation can be effective in controlling fear responses.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">4. Healthy Lifestyle Choices:</h5>
+                    <p class="section-text">Maintaining a healthy lifestyle can positively impact mental health and reduce fear. Regular exercise, a balanced diet, and sufficient sleep contribute to overall well-being and help manage stress and anxiety.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">5. Professional Counseling:</h5>
+                    <p class="section-text">Seeking professional counseling from a licensed psychologist or psychiatrist can provide valuable support in managing fear. These professionals can offer personalized treatment plans and therapeutic interventions tailored to individual needs.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">6. Building a Support System:</h5>
+                    <p class="section-text">Having a strong support system of family, friends, or support groups can provide emotional reassurance and practical assistance in managing fear. Sharing experiences and coping strategies with others can be beneficial.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">7. Avoiding Triggers:</h5>
+                    <p class="section-text">Identifying and avoiding known triggers of fear can help prevent exacerbation of symptoms. Understanding and managing exposure to these triggers can be part of a comprehensive fear management strategy.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">8. Medication (if necessary):</h5>
+                    <p class="section-text">In some cases, medication may be prescribed to help manage severe fear or anxiety symptoms. It's important to work closely with a healthcare provider to determine the appropriate medication and dosage.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">9. Developing Coping Skills:</h5>
+                    <p class="section-text">Developing effective coping skills, such as problem-solving techniques and emotional regulation strategies, can help individuals handle fear more effectively and reduce its impact on daily life.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">10. Regular Follow-Up:</h5>
+                    <p class="section-text">Regular follow-up appointments with a mental health professional are essential for monitoring progress and adjusting treatment plans as needed. Consistent support and evaluation can help maintain improvements in managing fear.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Conclusion:</h5>
+                    <p class="section-text">Managing fear effectively requires a comprehensive approach that combines therapeutic techniques, lifestyle adjustments, and professional support. With the guidance of an experienced doctor, individuals can develop strategies to address and overcome fear, leading to improved mental well-being.</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Fibrosis -->
+        {% elif prediction_text == 'joy' %}
+        <div class="card">
+            <center><h1>Emotion Prediction - Joy</h1></center>
+            <div class="card-header">
+                Joy Prediction Information<br><br>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsFFoQNYPZINqsW2rQSRTbPKz2TfOPZZ9kwg&s" alt="Joy Prediction">
+            </div>
+            <div class="card-body">
+                <div class="section">
+                    <h5 class="section-title">Understanding Joy Prediction:</h5>
+                    <p class="section-text">Predicting joy involves analyzing emotional responses and behaviors to determine indicators of happiness. This can be achieved through various methods including sentiment analysis, facial recognition, and behavioral analysis. Advanced machine learning algorithms and data processing techniques are used to train models to recognize patterns associated with joy.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Approach of a Doctor:</h5>
+                    <p class="section-text">A doctor  in psychological and emotional health would approach joy prediction by focusing on the following:</p>
+                    <ul>
+                        <li><strong>Clinical Assessment:</strong> Conducting thorough assessments to understand the patient's emotional baseline and any factors influencing their joy.</li>
+                        <li><strong>Behavioral Observation:</strong> Monitoring and analyzing behaviors and interactions to identify patterns related to joyful responses.</li>
+                        <li><strong>Data Integration:</strong> Utilizing data from various sources such as surveys, interviews, and psychological tests to enrich the understanding of joy.</li>
+                        <li><strong>Advanced Techniques:</strong> Employing advanced psychological techniques and methodologies to validate and interpret predictive data.</li>
+                        <li><strong>Personalized Recommendations:</strong> Providing personalized strategies and interventions based on the predictive analysis to enhance overall emotional well-being.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        {% elif prediction_text == 'neutral' %}
+        <div class="card">
+    <center><h1>Emotion Prediction: Addressing Neutral Emotions</h1></center>
+    <div class="card-header">
+        Expert Insights on Neutral Emotions<br><br>
+        <img src="https://thumbs.dreamstime.com/b/close-up-portrait-beautiful-young-caucasian-man-neutral-indifferent-serious-face-people-human-facial-expressions-138673273.jpg" alt="Expert Doctor">
+    </div>
+    <div class="card-body">
+        <div class="section">
+            <h5 class="section-title">Understanding Neutral Emotions:</h5>
+            <p class="section-text">Neutral emotions are often characterized by a lack of strong feelings in either a positive or negative direction. They can indicate a state of emotional equilibrium or disengagement. Identifying and predicting neutral emotions involves analyzing subtle cues that may not be immediately apparent. These cues include facial expressions, voice tone, and body language.</p>
+        </div>
+        <div class="section">
+            <h5 class="section-title">Challenges in Predicting Neutral Emotions:</h5>
+            <p class="section-text">Predicting neutral emotions can be challenging because they lack the distinct markers found in more intense emotional states. Models may struggle with distinguishing neutral from other emotions due to the subtlety of the indicators. It requires sophisticated algorithms and high-quality data to improve accuracy.</p>
+        </div>
+        <div class="section">
+            <h5 class="section-title">Expert Recommendations:</h5>
+            <p class="section-text">According to emotional analysis and psychology, several approaches can enhance the prediction of neutral emotions:</p>
+            <ul>
+                <li><strong>Utilize Advanced Algorithms:</strong> Employ deep learning techniques such as Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs) to analyze subtle patterns in emotional data.</li>
+                <li><strong>Enhance Data Quality:</strong> Collect high-resolution and comprehensive data from multiple sources, including facial expressions, speech patterns, and physiological signals.</li>
+                <li><strong>Incorporate Contextual Information:</strong> Integrate contextual factors such as the individual’s environment and recent experiences to better interpret neutral emotional states.</li>
+                <li><strong>Continuous Learning:</strong> Implement models that adapt and learn from new data to improve prediction accuracy over time.</li>
+                <li><strong>Regular Validation:</strong> Periodically validate models against real-world scenarios to ensure they accurately reflect emotional states and adjust as necessary.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h5 class="section-title">Practical Solutions for Addressing Neutral Emotions:</h5>
+            <p class="section-text">To address neutral emotions effectively, consider the following practical steps:</p>
+            <ul>
+                <li><strong>Engage in Active Observation:</strong> Regularly monitor and analyze emotional cues from various sources to detect subtle shifts in emotional states.</li>
+                <li><strong>Improve Communication:</strong> Enhance communication strategies to better understand and address the reasons behind neutral emotional responses.</li>
+                <li><strong>Provide Support:</strong> Offer support and resources to individuals showing neutral emotions to encourage engagement and address potential underlying issues.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h5 class="section-title">Conclusion:</h5>
+            <p class="section-text">Addressing neutral emotions requires a nuanced approach and a commitment to continuous improvement in predictive models. By leveraging advanced technology and expert insights, we can better understand and manage these subtle emotional states.</p>
+        </div>
+    </div>
+</div>
+
+        {% elif prediction_text == 'sadness' %}
+
+        <div class="card">
+            <center><h1>Expert Solutions for Addressing Sadness</h1></center>
+            <div class="card-header">
+                Addressing Sadness: Expert Advice<br><br>
+                <img src="https://img.freepik.com/premium-photo/sad-man-sitting-edge-stream-woods_893012-63774.jpg" alt="Doctor Addressing Sadness">
+            </div>
+            <div class="card-body">
+                <div class="section">
+                    <h5 class="section-title">Understanding Sadness:</h5>
+                    <p class="section-text">Sadness is a natural emotional response to distressing situations and can vary in intensity. It may be a normal reaction to life events or a sign of an underlying mental health condition. It's important to recognize when sadness becomes overwhelming or persistent, as it could indicate clinical depression or another mood disorder.</p>
+                </div>
+                
+                <div class="section">
+                    <h5 class="section-title">Therapeutic Strategies:</h5>
+                    <p class="section-text">1. **Cognitive Behavioral Therapy (CBT):** This evidence-based therapy helps individuals identify and change negative thought patterns and behaviors that contribute to sadness.</p>
+                    <p class="section-text">2. **Interpersonal Therapy (IPT):** Focuses on improving interpersonal relationships and communication skills, which can help alleviate sadness stemming from social or relational issues.</p>
+                    <p class="section-text">3. **Medication:** In some cases, antidepressants or other medications may be prescribed to help manage symptoms, particularly if the sadness is part of a more severe condition like major depression.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Lifestyle Changes:</h5>
+                    <p class="section-text">1. **Exercise:** Regular physical activity can boost mood and overall well-being. Exercise releases endorphins, which are natural mood lifters.</p>
+                    <p class="section-text">2. **Healthy Diet:** A balanced diet rich in nutrients supports mental health. Foods rich in omega-3 fatty acids, such as fish and nuts, can be particularly beneficial.</p>
+                    <p class="section-text">3. **Sleep Hygiene:** Ensuring adequate and quality sleep is crucial for emotional health. Establishing a regular sleep schedule and creating a restful environment can improve mood.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Preventive Measures:</h5>
+                    <p class="section-text">1. **Stress Management:** Learning and practicing stress management techniques, such as mindfulness, meditation, and relaxation exercises, can help prevent the escalation of sadness.</p>
+                    <p class="section-text">2. **Social Support:** Maintaining strong relationships and seeking support from friends, family, or support groups can provide emotional comfort and resilience against sadness.</p>
+                    <p class="section-text">3. **Self-Care:** Engaging in activities that bring joy and satisfaction, such as hobbies, can enhance overall well-being and counteract feelings of sadness.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">When to Seek Help:</h5>
+                    <p class="section-text">It's important to seek professional help if sadness persists for more than a few weeks, interferes with daily functioning, or is accompanied by other symptoms such as changes in appetite, sleep disturbances, or thoughts of self-harm. A mental health professional can provide appropriate diagnosis and treatment tailored to individual needs.</p>
+                </div>
+            </div>
+        </div>
+        
+
+        {% elif prediction_text == 'shame' %}
+        <div class="card">
+            <center><h1>Addressing Shame Related to Credit Card Issues</h1></center>
+            <div class="card-header">
+                Solutions <br><br>
+                <img src="https://media.istockphoto.com/id/1464919520/photo/asian-businessman-blamed-at-work.webp?b=1&s=170667a&w=0&k=20&c=-XdGHRkaqMDhuRTE9jX_w9LBSJT_Y2-16QLI5eUTK3o=" alt="Credit Card Issues">
+            </div>
+            <div class="card-body">
+                <div class="section">
+                    <h5 class="section-title">Understanding Shame in Financial Issues</h5>
+                    <p class="section-text">Shame related to financial problems, such as credit card issues, can stem from feelings of inadequacy or fear of judgment. It’s important to recognize that financial difficulties are common and that seeking help is a sign of strength, not weakness.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Seek Professional Support</h5>
+                    <p class="section-text">Consulting with a mental health professional can help address feelings of shame and anxiety related to financial problems. Therapy can provide a safe space to explore these emotions and develop coping strategies. A psychologist with experience in financial issues can offer tailored guidance and support.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Develop a Financial Plan</h5>
+                    <p class="section-text">Creating a financial plan can help manage and reduce financial stress. Work with a financial advisor to set realistic goals, create a budget, and develop a debt repayment strategy. Feeling in control of your finances can reduce feelings of shame and improve overall well-being.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Build a Support Network</h5>
+                    <p class="section-text">Share your experiences with trusted friends or family members. Having a support network can provide emotional relief and practical advice. Support groups specifically for financial issues can also offer a sense of community and understanding.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Practice Self-Compassion</h5>
+                    <p class="section-text">Be kind to yourself and recognize that everyone faces financial challenges at some point. Practice self-compassion by acknowledging your efforts to improve your situation and understanding that it’s okay to make mistakes and learn from them.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Educate Yourself</h5>
+                    <p class="section-text">Understanding how credit cards work and the common issues associated with them can empower you to make informed decisions. Educate yourself about financial management and consumer rights to reduce feelings of helplessness and shame.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Set Realistic Goals</h5>
+                    <p class="section-text">Set achievable financial goals and celebrate small victories along the way. Breaking down larger goals into manageable steps can make them feel less overwhelming and reduce feelings of shame associated with long-term financial challenges.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Address Emotional Health</h5>
+                    <p class="section-text">Pay attention to your emotional health and seek support if needed. Practices such as mindfulness, meditation, or yoga can help manage stress and improve emotional resilience. Addressing mental health alongside financial issues can lead to better overall outcomes.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Maintain Open Communication</h5>
+                    <p class="section-text">Maintain open communication with your credit card issuer. If you face financial difficulties, discuss possible solutions or assistance programs. Being proactive can help reduce feelings of shame and show that you are taking responsibility for the situation.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Seek Long-Term Solutions</h5>
+                    <p class="section-text">Work towards long-term financial stability by building savings, improving credit scores, and planning for future expenses. Long-term solutions can provide a sense of security and reduce ongoing financial stress and shame.</p>
+                </div>
+            </div>
+        </div>
+
+        {% elif prediction_text == 'surprise' %}
+        <div class="card">
+            <center><h1>Emotion Prediction: Addressing the "Surprise" Issue</h1></center>
+            <div class="card-header">
+                Expert Advice on Handling "Surprise" Emotion Predictions<br><br>
+                <img src="https://img.freepik.com/free-photo/wow-attractive-male-half-length-front-portrait-gray-studio-backgroud-young-emotional-surprised-man-standing-with-open-mouth-human-emotions-facial-expression-concept_155003-31387.jpg" alt="Emotion Prediction">
+            </div>
+            <div class="card-body">
+                <div class="section">
+                    <h5 class="section-title">Understanding the "Surprise" Emotion:</h5>
+                    <p class="section-text">The emotion of "surprise" is complex and can vary greatly in intensity and context. It often involves sudden changes in facial expressions or physiological responses. Accurately predicting this emotion requires a nuanced approach to capture the subtle differences in expressions and reactions.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Challenges in Predicting "Surprise":</h5>
+                    <p class="section-text">Predicting "surprise" can be challenging due to its fleeting nature and the variability in how individuals express surprise. The problem may arise from limited data, noise in the input signals, or inadequate feature extraction techniques.</p>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Expert Solutions to Address the "Surprise" Issue:</h5>
+                    <p class="section-text">Based on a decade of experience in emotion prediction and analysis, the following strategies are recommended to improve the accuracy of "surprise" emotion predictions:</p>
+                    <ul class="section-text">
+                        <li><strong>Enhance Data Collection:</strong> Gather a diverse and extensive dataset that includes various expressions of surprise. This should cover different demographics, contexts, and intensity levels to improve the model's ability to generalize.</li>
+                        <li><strong>Utilize Advanced Algorithms:</strong> Implement advanced machine learning algorithms, such as deep learning models, that are capable of capturing subtle nuances in facial expressions and physiological signals associated with surprise.</li>
+                        <li><strong>Integrate Multimodal Data:</strong> Combine data from multiple sources, such as facial expressions, voice tone, and physiological responses, to provide a more comprehensive understanding of the surprise emotion.</li>
+                        <li><strong>Implement Real-Time Analysis:</strong> Develop systems that can analyze emotional responses in real-time to capture the immediate and transient nature of surprise.</li>
+                        <li><strong>Improve Feature Extraction:</strong> Focus on extracting relevant features that are indicative of surprise, such as changes in facial landmarks or variations in voice pitch.</li>
+                        <li><strong>Regular Model Training:</strong> Continuously train and update the predictive models with new data to adapt to evolving expressions and reactions of surprise.</li>
+                        <li><strong>Utilize Expert Annotations:</strong> Involve emotion experts to annotate training data with precise labels for surprise, ensuring high-quality data for model training.</li>
+                        <li><strong>Monitor and Evaluate:</strong> Regularly evaluate the performance of emotion prediction systems and adjust strategies based on feedback and performance metrics.</li>
+                        <li><strong>Address Data Imbalances:</strong> Ensure that the dataset is balanced to prevent biases in the model's predictions, especially for less frequent expressions of surprise.</li>
+                        <li><strong>Collaborate with Psychologists:</strong> Work with psychologists and emotion researchers to better understand the psychological aspects of surprise and incorporate this knowledge into model development.</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h5 class="section-title">Conclusion:</h5>
+                    <p class="section-text">Addressing the "surprise" emotion prediction challenge requires a multifaceted approach that involves improving data quality, utilizing advanced technologies, and ongoing evaluation. By following these expert recommendations, you can enhance the accuracy and reliability of emotion prediction systems.</p>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        {% endif %}
+    </div>
+</body>
+
+</html>
+

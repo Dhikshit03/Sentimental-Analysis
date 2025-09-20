@@ -1,0 +1,167 @@
+{% extends "users/base.html" %}
+{% load static %}
+
+{% block title %} Login Page {% endblock title%}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Inicio de sesión</title>
+    <style>
+
+        body {
+            background-color: #f8f9fa;
+            background: url('https://t3.ftcdn.net/jpg/07/91/04/70/360_F_791047062_0LtBtDX3Nsc64r168KydmFzSpEUXWm8A.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+ /* General styles for the login container */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #495057;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #7c0000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #7c0000;
+}
+
+.alert {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert .close {
+    float: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #721c24;
+    background: transparent;
+    border: none;
+}
+
+.alert .close:hover {
+    color: #f5c6cb;
+    text-decoration: none;
+}
+
+.btn-primary {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #7c0000;
+    color: #fff;
+    border: 1px solid #7c0000;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #7c0000;
+    border-color: #850000;
+}
+
+.btn-primary:focus, .btn-primary:active {
+    outline: none;
+}
+
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <div class="login-container">
+        <h2>LOGIN</h2>
+        {% if form.errors %}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <strong>{{ error }}</strong>
+                    {% endfor %}
+                {% endfor %}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endif %}
+        
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Username</label>
+                {{ form.username }}
+            </div>
+            <div class="form-group">
+                <label class="small mb-1" for="inputPassword">Password</label>
+                {{ form.password }}
+            </div>
+           
+
+          <button type="submit">LOGIN</button>
+          
+        </form><br>
+        <a class="btn btn-primary" href="{% url 'users-register' %}" style="border-color: rgb(255, 47, 47);" role="button">Register</a>
+        
+            
+                
+            
+        
+      </div>
+    </section>
+    
+  </body>
+</html>
+{% endblock %}

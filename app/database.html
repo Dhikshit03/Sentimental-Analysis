@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database</title>
+</head>
+<style>
+   /* General body styling */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #ffd1d1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #000000;
+    
+    padding: 20px;
+}
+
+/* Table container styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensures the border-radius is visible */
+}
+
+/* Table header styling */
+th {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid #b30000; /* Darker border for header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Table cell styling */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Inner shadow for cells */
+}
+
+/* Zebra striping for rows */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect for rows */
+tbody tr:hover {
+    background-color: #ffd4d3;
+    transform: scale(1.02); /* Slight scale for hover effect */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Styling for empty message row */
+tbody tr:empty {
+    text-align: center;
+    color: #6c757d;
+}
+
+/* Table container shadow effect */
+.table-container {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+
+/* Link styling */
+a {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #b30000;
+}
+
+</style>
+<body>
+    <h1>Recent Predictions Database</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Input Text</th>
+                <th>Output</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prediction in recent_predictions %}
+                <tr>
+                    <td>{{ prediction.input_text }}</td>
+                    <td>{{ prediction.output_label }}</td>
+                    <td>{{ prediction.created_at }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="3">No predictions available.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'Deploy' %}">Back to Predict Page</a>
+</body>
+</html>
