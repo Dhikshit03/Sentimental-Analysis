@@ -31,3 +31,13 @@ This project predicts human emotions from text using **Natural Language Processi
 ---
 
 ## Folder Structure
+- **.ipynb_checkpoints**
+  - M1 - DATA_PREPROCESSING-checkpoint.ipynb
+  - M2 - DATA_VISUALIZATION-checkpoint.ipynb
+  - M3 - DTC-checkpoint.ipynb
+  - M3 - GBC-checkpoint.ipynb
+  - M3-LSTM -checkpoint.ipynb
+  - M4 - RFC-checkpoint.ipynb
+  - M5 - RFC-checkpoint.ipynb
+-**Deploy**
+  -  
