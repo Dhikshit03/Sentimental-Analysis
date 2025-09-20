@@ -31,6 +31,13 @@ This project predicts human emotions from text using **Natural Language Processi
 ---
 
 ## Folder Structure
+## Sentimental-Analysis
+- **emotion.csv**
+- **M1 - DATA_PREPROCESSING.ipynb**
+- **M2 - DATA_VISUALIZATION.ipynb**
+- **M3 - DTC.ipynb**
+- **M4 - RFC.ipynb**
+- **VECTOR1.pkl**
 - **.ipynb_checkpoints**
   - M1 - DATA_PREPROCESSING-checkpoint.ipynb
   - M2 - DATA_VISUALIZATION-checkpoint.ipynb
